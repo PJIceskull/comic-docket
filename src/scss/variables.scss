@@ -1,0 +1,49 @@
+$dark-cyan: #00585f;
+$cyan: #009393;
+$beige: #f5f3dc;
+$smoke-black: #454445;
+$orange: #ff5828;
+
+// Filters
+$orange-filter: brightness(0) saturate(100%) invert(47%) sepia(34%)
+  saturate(5275%) hue-rotate(344deg) brightness(100%) contrast(102%);
+$beige-filter: brightness(0) saturate(100%) invert(98%) sepia(3%)
+  saturate(1095%) hue-rotate(4deg) brightness(101%) contrast(92%);
+
+// Color Palette using Map value
+$web_colors: (
+  "cyan": $cyan,
+  "dark_cyan": $dark-cyan,
+  "beige": $beige,
+  "smoke_black": $smoke-black,
+  "orange": $orange,
+  "green": "#34C300",
+  "red": "#F80000",
+);
+// Remove '/' in code below
+// @debug map-get($/map: $-colors, $/key: 'red');
+
+// Size Values ///
+
+// Devices
+$tv-width: 1280px;
+$web-width: 1440px;
+$iPad-width: 780px;
+$hopne-width: 430px;
+
+// Height & Width
+// $site-width: 1280px;
+$site-width: $tv-width;
+$site-height: 800px;
+
+// Font Variables
+// Font Weight
+$thin_Font: 100;
+$ExtraLight_Font: 200;
+$light_Font: 300;
+$regular_Font: 400;
+$medium_Font: 500;
+$semibold_Font: 600;
+$Bold_Font: 700;
+$extraBold_Font: 800;
+$Black_Font: 900;

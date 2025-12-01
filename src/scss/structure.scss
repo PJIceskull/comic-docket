@@ -1,0 +1,103 @@
+@use "variables";
+/* :root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     color: #213547;
+//     background-color: #ffffff;
+//   }
+//   a:hover {
+//     color: #747bff;
+//   }
+//   button {
+//     background-color: #f9f9f9;
+//   }
+// }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: map-get($map: variables.$web_colors, $key: "beige");
+  color: map-get($map: variables.$web_colors, $key: "smoke_black");
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Roboto_Flex;
+  font-weight: variables.$Black_Font;
+}
+
+p,
+a,
+label,
+input {
+  font-family: Inter;
+  font-weight: variables.$regular_Font;
+}
+p a {
+  cursor: pointer;
+}
+a {
+  color: map-get($map: variables.$web_colors, $key: "orange");
+  font-weight: variables.$Bold_Font;
+  transition-duration: 0.25s;
+  &:hover {
+    color: lighten($color: variables.$orange, $amount: 25%);
+  }
+  &:active {
+    color: #ffffff;
+  }
+  img {
+    transition-duration: 0.2s;
+  }
+}
+label,
+input {
+  color: map-get($map: variables.$web_colors, $key: "smoke_black");
+}
+
+#app {
+  //   max-width: 1280px;
+  max-width: variables.$tv-width;
+  //   min-height: 100dvh;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  // background-color: cornflowerblue;
+}
+
+nav,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
