@@ -1,6 +1,6 @@
 # Comic Docket
 
-![]()
+![A Preview of the Comic Docket website](public/assets/images/comic_docket_preview.png)
 
 Author: Pierce Issah
 
@@ -12,14 +12,14 @@ Author: Pierce Issah
 - [Website Colors](#website-colors)
 - [Fonts](#fonts)
 - [Websites Referenced](#websites-referenced)
-- [Techology Used](#techology-used)
+- [Technology Used](#techology-used)
 - []()
 
 ## Links to Site
 
 Links to view live app.
 
-- [Github Pages]()
+- [Github Pages](https://pjiceskull.github.io/comic-docket/)
 - [Web4]()
 <!-- - [Firebase]() -->
 
