@@ -39,6 +39,17 @@ export function init() {
 
   // enableCORS(comicvineVolURL);
 
+  $.ajax({
+    url: comicvineVolURL,
+    dataType: "jsonp",
+    success: function (data) {
+      console.log("Data: ", data);
+    },
+    error: function (error) {
+      console.log("Error: ", error);
+    },
+  });
+
   $.getJSON(comicvineVolURL, function (data) {
     console.log("Data: ", data);
   }).fail((error) => {
