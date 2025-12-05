@@ -1,3 +1,12 @@
+import {
+  comicvine_apiKey,
+  comicvineURL,
+  JSON_URLformat,
+  apiResultsLimitURL,
+  resultsLimit,
+} from "../apiKeys";
+// import { enableCORS } from "../main";
+
 // let pageID = "home";
 let hashTag = window.location.hash;
 let pageID = hashTag.replace("#", "");
@@ -19,7 +28,22 @@ export function render() {
 }
 
 export function init() {
-  console.log("Home Function Clicked.");
+  // API response calls
+  let resultsLimit = 10;
+  let cvResource = ""; // Comicvine resource
+  let comicvineVolURL = `${comicvineURL}/volumes/?api_key=${comicvine_apiKey}${apiResultsLimitURL}${resultsLimit}${JSON_URLformat}`;
+
+  // console.log("Home Function Clicked.");
+
+  console.log("Volumes:", comicvineVolURL);
+
+  // enableCORS(comicvineVolURL);
+
+  $.getJSON(comicvineVolURL, function (data) {
+    console.log("Data: ", data);
+  }).fail((error) => {
+    console.log("Error: ", error);
+  });
 
   // $("#app").on("click", "#clickMe", function () {
   //   alert("You clicked the button!");
