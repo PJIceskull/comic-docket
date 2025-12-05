@@ -462,6 +462,12 @@ input[type=text] {
   border-radius: 8px;
   height: 275px;
   width: 185px;
+  overflow: hidden;
+}
+.comicContainer .comicCard .comicCover img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 .comicContainer .comicCard p {
   font-size: 18px;
