@@ -48,6 +48,19 @@ function changeRoute() {
   }
 }
 
+// export function enableCORS(api_URL) {
+//   $.ajax({
+//     url: api_URL,
+//     dataType: "jsonp",
+//     success: function (data) {
+//       console.log("Data: ", data);
+//     },
+//     error: function (error) {
+//       console.log("Error: ", error);
+//     },
+//   });
+// }
+
 /////////////////////////////////////////////////////
 // User Account Registration and Login Functions //
 ////////////////////////////////////////////////////
