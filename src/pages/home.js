@@ -24,6 +24,7 @@ export function render() {
     // For example, insert the HTML into a div with id="home-content"
     // console.log("Page data: " + data);
     $("#app").html(data);
+    init();
   });
 }
 
@@ -39,6 +40,13 @@ export function init() {
 
   // enableCORS(comicvineVolURL);
 
+  // let proxyURL = `https://cors-anywhere.herokuapp.com/${comicvineVolURL}`;
+  // $.getJSON(proxyURL, function (data) {
+  //   console.log("Data: ", data);
+  // }).fail((error) => {
+  //   console.log("Error: ", error);
+  // });
+
   $.ajax({
     url: comicvineVolURL,
     dataType: "jsonp",
@@ -50,11 +58,11 @@ export function init() {
     },
   });
 
-  $.getJSON(comicvineVolURL, function (data) {
-    console.log("Data: ", data);
-  }).fail((error) => {
-    console.log("Error: ", error);
-  });
+  // $.getJSON(comicvineVolURL, function (data) {
+  //   console.log("Data: ", data);
+  // }).fail((error) => {
+  //   console.log("Error: ", error);
+  // });
 
   // $("#app").on("click", "#clickMe", function () {
   //   alert("You clicked the button!");

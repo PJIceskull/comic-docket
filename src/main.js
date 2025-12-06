@@ -48,6 +48,21 @@ function changeRoute() {
   }
 }
 
+// Function to for changing the page
+// Use to be called in other functions
+function changePage(pageID) {
+  let hashTag = window.location.hash;
+  let webURL = window.location.href;
+  // Scroll to Top of the Page
+  scroll(0, 0);
+
+  const route = routes[pageID];
+
+  webURL.replace(hashTag, route);
+
+  $("#app").html(route.render());
+}
+
 // export function enableCORS(api_URL) {
 //   $.ajax({
 //     url: api_URL,
@@ -64,6 +79,8 @@ function changeRoute() {
 /////////////////////////////////////////////////////
 // User Account Registration and Login Functions //
 ////////////////////////////////////////////////////
+// All Login features should be Async function
+
 // Check if User is logged in or not
 onAuthStateChanged(auth, (user) => {
   if (user) {
@@ -79,6 +96,56 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
+// Sign Up
+export async function signUp(email, password, displayName) {
+  try {
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password,
+      displayName
+    );
+    // See what user is
+    console.log("User signed up:", userCredential.user);
+  } catch (error) {
+    console.log("Error signing up:", error);
+  }
+  changePage("home");
+}
+
+// Log in
+export async function login(email, password) {
+  await signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+      // See what user is
+      console.log("User logged up:", user);
+
+      // setTimeout(function () {
+      //   changePage("home");
+      // }, 1000);
+      changePage("home");
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+
+      console.log("Error logging in:", error);
+    });
+}
+
+// Sign Out // Loggin Out
+export async function logout() {
+  try {
+    await signOut(auth);
+    console.log("User Signed out");
+  } catch (error) {
+    console.error("Error signing out:", error);
+  }
+  changePage("home");
+}
+
 function initURLListener() {
   $(window).on("hashchange", changeRoute);
   changeRoute();
@@ -90,6 +157,12 @@ function initListeners() {
     // console.log(e);
     // $(".dropDownMenu").toggle(function () {});
     $(".dropDownMenu").toggleClass("showMenu");
+  });
+
+  // Click on logout Button
+  $("#userAccountLinks .profileGroup .logoutLink").on("click", function (e) {
+    logout();
+    // setTimeout(function () {}, 1000);
   });
 }
 
