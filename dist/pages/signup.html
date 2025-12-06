@@ -3,23 +3,24 @@
     <h1>Sign Up</h1>
 
     <div class="inputBox">
-      <label for="email">Email:</label>
+      <label for="loginEmail">Email:</label>
       <input type="text" id="loginEmail" required />
     </div>
     <div class="inputBox">
-      <label for="username">Username:</label>
-      <input type="text" id="userName" required />
+      <label for="userName">Username:</label>
+      <input type="text" id="userName" required autocomplete="username" />
     </div>
     <div class="inputBox">
-      <label for="password">Password:</label>
-      <input type="text" id="loginPassword" required />
+      <label for="loginPassword">Password:</label>
+      <input type="password" id="loginPassword" required />
     </div>
     <div class="inputBox">
-      <label for="confirm password">Confirm Password:</label>
-      <input type="text" id="confirmPassword" required />
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" required />
+      <p class="message"></p>
     </div>
 
-    <button class="cyanBTN">Sign up</button>
+    <button type="submit" class="cyanBTN">Sign up</button>
 
     <p>Already have an account? <a href="#login">Sign in!</a></p>
   </form>
