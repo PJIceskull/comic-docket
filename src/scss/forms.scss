@@ -20,7 +20,7 @@
   }
 }
 
-input[type="text"] {
+input {
   border: 2px solid map-get($map: variables.$web_colors, $key: "smoke_black");
   border-radius: 8px;
   transition-duration: 0.2s;
