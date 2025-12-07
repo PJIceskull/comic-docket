@@ -2,9 +2,19 @@
 button {
   transition-duration: 0.25s;
   border: none;
+  cursor: pointer;
   a {
     height: 100%;
     font-weight: variables.$Bold_Font;
+  }
+}
+
+.cyanBTN,
+.blackBTN {
+  color: map-get($map: variables.$web_colors, $key: "beige");
+  a {
+    color: map-get($map: variables.$web_colors, $key: "beige");
+    text-decoration: none;
   }
 }
 
@@ -14,7 +24,15 @@ button {
   &:hover {
     background-color: map-get($map: variables.$web_colors, $key: "dark_cyan");
   }
-  a {
-    color: map-get($map: variables.$web_colors, $key: "beige");
+}
+.blackBTN {
+  background-color: map-get($map: variables.$web_colors, $key: "smoke_black");
+  &:hover {
+    background-color: #949494;
   }
+}
+.buttonWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }

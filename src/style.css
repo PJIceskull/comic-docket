@@ -57,7 +57,9 @@ h4 {
 p,
 a,
 label,
-input {
+input,
+textarea,
+select {
   font-family: Inter;
   font-weight: 400;
 }
@@ -100,13 +102,31 @@ footer {
   justify-content: space-evenly;
 }
 
+.centerContent {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 button {
   transition-duration: 0.25s;
   border: none;
+  cursor: pointer;
 }
 button a {
   height: 100%;
   font-weight: 700;
+}
+
+.cyanBTN,
+.blackBTN {
+  color: #f5f3dc;
+}
+.cyanBTN a,
+.blackBTN a {
+  color: #f5f3dc;
+  text-decoration: none;
 }
 
 .cyanBTN {
@@ -116,8 +136,18 @@ button a {
 .cyanBTN:hover {
   background-color: #00585f;
 }
-.cyanBTN a {
-  color: #f5f3dc;
+
+.blackBTN {
+  background-color: #454445;
+}
+.blackBTN:hover {
+  background-color: #949494;
+}
+
+.buttonWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 nav {
@@ -312,9 +342,13 @@ footer .footerText {
   font-weight: 300;
 }
 
-.inputBox {
+.inputBox,
+.descriptionBox {
   display: flex;
   flex-direction: column;
+}
+
+.inputBox {
   gap: 16px;
   width: 100%;
 }
@@ -331,13 +365,35 @@ footer .footerText {
 .inputBox input:user-invalid {
   border: 2px solid #f80000;
 }
+.inputBox select {
+  font-size: 20px;
+}
 
-input {
+.inputWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.descriptionBox {
+  gap: 12px;
+}
+
+input,
+textarea,
+select {
   border: 2px solid #454445;
   border-radius: 8px;
   transition-duration: 0.2s;
+}
+
+input {
   height: 48px;
   padding: 0 12px;
+}
+
+select {
+  padding: 12px;
 }
 
 .register-page {
@@ -380,6 +436,131 @@ input {
 }
 .signinForm p a:hover {
   color: #00585f;
+}
+
+.createForm {
+  width: 61.25dvw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 38px;
+}
+.createForm h1 {
+  color: #ff5828;
+  text-decoration: underline;
+  font-size: 36px;
+  text-underline-offset: 4px;
+}
+.createForm h2,
+.createForm label,
+.createForm input,
+.createForm select {
+  font-family: Inter;
+}
+.createForm h2 {
+  font-weight: 700;
+}
+.createForm label {
+  font-weight: 500;
+  font-size: 20px;
+}
+.createForm .bookInfoBox {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 2px solid #454445;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  padding: 25px;
+}
+.createForm input,
+.createForm textarea,
+.createForm select {
+  background-color: #f5f3dc;
+}
+.createForm input::placeholder,
+.createForm textarea::placeholder,
+.createForm select::placeholder {
+  color: #454445;
+}
+.createForm .inputBox {
+  gap: 10px;
+}
+.createForm .inputWrap {
+  gap: 50px;
+}
+.createForm .inputWrap input {
+  width: 100%;
+}
+.createForm .descriptionBox input,
+.createForm .descriptionBox textarea {
+  font-size: 18px;
+  padding: 15px;
+}
+.createForm .buttonWrap {
+  gap: 54px;
+}
+.createForm .cyanBTN,
+.createForm .blackBTN {
+  border-radius: 12px;
+  font-family: Inter;
+  font-weight: 900;
+  font-size: 24px;
+}
+.createForm .cyanBTN a,
+.createForm .blackBTN a {
+  font-family: Inter;
+  font-weight: 900;
+  font-size: 24px;
+}
+.createForm .cyanBTN {
+  padding: 18px;
+}
+.createForm .blackBTN a {
+  padding: 18px;
+  display: block;
+}
+
+.bookCoverRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.uploadImage,
+.imagePreview {
+  border-radius: 8px;
+  padding: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 32px;
+  cursor: pointer;
+}
+.uploadImage .imgIcon,
+.imagePreview .imgIcon {
+  height: 72px;
+}
+.uploadImage .imgIcon img,
+.imagePreview .imgIcon img {
+  height: 100%;
+}
+
+.uploadImage {
+  border: 3px dotted #454445;
+}
+.uploadImage h2 {
+  color: #009393;
+}
+
+.imagePreview {
+  border: 3px solid #454445;
+}
+.imagePreview h2 {
+  font-style: italic;
 }
 
 #home-content {

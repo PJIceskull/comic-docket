@@ -59,7 +59,9 @@ h4 {
 p,
 a,
 label,
-input {
+input,
+textarea,
+select {
   font-family: Inter;
   font-weight: variables.$regular_Font;
 }
@@ -100,4 +102,11 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.centerContent {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

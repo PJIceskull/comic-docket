@@ -1,8 +1,11 @@
 @use "variables";
 
-.inputBox {
+.inputBox,
+.descriptionBox {
   display: flex;
   flex-direction: column;
+}
+.inputBox {
   gap: 16px;
   width: 100%;
   label {
@@ -18,14 +21,32 @@
       border: 2px solid #f80000;
     }
   }
+  select {
+    font-size: 20px;
+  }
+}
+.inputWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.descriptionBox {
+  gap: 12px;
 }
 
-input {
+input,
+textarea,
+select {
   border: 2px solid map-get($map: variables.$web_colors, $key: "smoke_black");
   border-radius: 8px;
   transition-duration: 0.2s;
+}
+input {
   height: 48px;
   padding: 0 12px;
+}
+select {
+  padding: 12px;
 }
 
 .register-page {
@@ -69,5 +90,127 @@ input {
     &:hover {
       color: map-get($map: variables.$web_colors, $key: "dark_cyan");
     }
+  }
+}
+
+.createForm {
+  width: 61.25dvw; // 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 38px;
+  h1 {
+    color: map-get($map: variables.$web_colors, $key: "orange");
+    text-decoration: underline;
+    font-size: 36px;
+    text-underline-offset: 4px;
+  }
+  h2,
+  label,
+  input,
+  select {
+    font-family: Inter;
+  }
+  h2 {
+    font-weight: variables.$Bold_Font;
+  }
+  label {
+    font-weight: variables.$medium_Font;
+    font-size: 20px;
+  }
+  .bookInfoBox {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 2px solid map-get($map: variables.$web_colors, $key: "smoke_black");
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    padding: 25px;
+  }
+  input,
+  textarea,
+  select {
+    background-color: map-get($map: variables.$web_colors, $key: "beige");
+    &::placeholder {
+      color: map-get($map: variables.$web_colors, $key: "smoke_black");
+    }
+  }
+  .inputBox {
+    gap: 10px;
+  }
+  .inputWrap {
+    gap: 50px;
+    input {
+      width: 100%;
+    }
+  }
+  .descriptionBox {
+    input,
+    textarea {
+      font-size: 18px;
+      padding: 15px;
+      //   min-height: 108px;
+    }
+  }
+  .buttonWrap {
+    gap: 54px;
+  }
+  .cyanBTN,
+  .blackBTN {
+    border-radius: 12px;
+    font-family: Inter;
+    font-weight: variables.$Black_Font;
+    font-size: 24px;
+    a {
+      font-family: Inter;
+      font-weight: variables.$Black_Font;
+      font-size: 24px;
+    }
+  }
+  .cyanBTN {
+    padding: 18px;
+  }
+  .blackBTN {
+    a {
+      padding: 18px;
+      display: block;
+    }
+  }
+}
+
+.bookCoverRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.uploadImage,
+.imagePreview {
+  border-radius: 8px;
+  padding: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 32px;
+  cursor: pointer;
+  .imgIcon {
+    height: 72px;
+    img {
+      height: 100%;
+    }
+  }
+}
+.uploadImage {
+  border: 3px dotted map-get($map: variables.$web_colors, $key: "smoke_black");
+  h2 {
+    color: map-get($map: variables.$web_colors, $key: "cyan");
+  }
+}
+.imagePreview {
+  border: 3px solid map-get($map: variables.$web_colors, $key: "smoke_black");
+  h2 {
+    font-style: italic;
   }
 }
