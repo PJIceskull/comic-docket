@@ -20,7 +20,7 @@ Author: Pierce Issah
 Links to view live app.
 
 - [Github Pages](https://pjiceskull.github.io/comic-docket/)
-- [Web4]()
+- [Web4](https://in-info-web4.luddy.indianapolis.iu.edu/~pissah/ComicDocket/)
 <!-- - [Firebase]() -->
 
 ## Project Description
