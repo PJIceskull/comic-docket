@@ -1,10 +1,10 @@
 @font-face {
   font-family: Roboto_Flex;
-  src: url(./assets/fonts/RobotoFlex-VariableFont_wght.ttf);
+  src: url(../assets/fonts/RobotoFlex-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: Inter;
-  src: url(./assets/fonts/Inter-VariableFont_wght.ttf);
+  src: url(../assets/fonts/Inter-VariableFont_wght.ttf);
 }
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -571,7 +571,7 @@ select {
   color: #f5f3dc;
   padding: 30px;
   font-family: Roboto_Flex;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.56)), url(./assets/images/pexels-introspectivedsgn-6654177.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.56)), url(../assets/images/pexels-introspectivedsgn-6654177.jpg);
   border-radius: 18px;
   display: flex;
   align-items: center;
