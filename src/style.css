@@ -109,6 +109,49 @@ footer {
   justify-content: center;
 }
 
+.successModal {
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.successBox {
+  color: #34c300;
+  font-weight: 700;
+  background-color: #dbffce;
+  border-radius: 16px;
+  padding: 44px;
+  margin-bottom: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.successBox .checkMark {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  background-color: #34c300;
+  padding: 3px;
+}
+.successBox .checkMark img {
+  height: 100%;
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
 button {
   transition-duration: 0.25s;
   border: none;
@@ -401,6 +444,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .signinForm {

@@ -110,7 +110,11 @@ export async function signUp(email, password, displayName) {
   } catch (error) {
     console.log("Error signing up:", error);
   }
-  changePage("home");
+
+  $(".successModal").toggleClass("hide");
+  setTimeout(function () {
+    changePage("home");
+  }, 1000);
 }
 
 // Log in
