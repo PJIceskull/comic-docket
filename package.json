@@ -12,7 +12,8 @@
   },
   "devDependencies": {
     "sass": "^1.94.1",
-    "vite": "^7.1.7"
+    "vite": "^7.1.7",
+    "vite-plugin-sftp": "^0.1.4"
   },
   "dependencies": {
     "firebase": "^12.5.0"
