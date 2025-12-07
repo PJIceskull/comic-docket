@@ -214,3 +214,25 @@ select {
     font-style: italic;
   }
 }
+
+.enterComicName {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  label {
+    font-size: 24px;
+    font-weight: variables.$Bold_Font;
+  }
+  input {
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid
+      map-get($map: variables.$web_colors, $key: "smoke_black");
+    font-size: 20px;
+    padding: 15px;
+    width: 100%;
+  }
+}

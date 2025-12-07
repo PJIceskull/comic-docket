@@ -563,6 +563,27 @@ select {
   font-style: italic;
 }
 
+.enterComicName {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.enterComicName label {
+  font-size: 24px;
+  font-weight: 700;
+}
+.enterComicName input {
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #454445;
+  font-size: 20px;
+  padding: 15px;
+  width: 100%;
+}
+
 #home-content {
   margin-bottom: 90px;
 }
