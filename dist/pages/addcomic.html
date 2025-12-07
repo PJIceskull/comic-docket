@@ -1,0 +1,129 @@
+<main class="centerContent">
+  <form class="createForm">
+    <h1>Create New Entry</h1>
+
+    <div class="bookInfoBox">
+      <h2>Basic Information</h2>
+      <div class="inputBox">
+        <label for="comicTitle">Title</label>
+        <input
+          type="text"
+          name="comicTitle"
+          id="comicTitle"
+          placeholder="eg. The Amazing Spider-man"
+        />
+      </div>
+
+      <div class="inputWrap">
+        <div class="inputBox">
+          <label for="comicAuthor">Author(s)</label>
+          <input
+            type="text"
+            name="comicAuthor"
+            id="comicAuthor"
+            placeholder="eg. Stan Lee"
+          />
+        </div>
+        <div class="inputBox">
+          <label for="comicArtist">Artist(s)</label>
+          <input
+            type="text"
+            name="comicArtist"
+            id="comicArtist"
+            placeholder="eg. Steve Dikto"
+          />
+        </div>
+      </div>
+
+      <div class="descriptionBox">
+        <label for="comicDescription">Description</label>
+        <textarea name="comicDescription" id="comicDesc" rows="5"></textarea>
+      </div>
+    </div>
+
+    <div class="bookInfoBox">
+      <h2>Book Cover</h2>
+
+      <div class="bookCoverRow">
+        <div class="uploadImage">
+          <div class="imgIcon">
+            <img
+              src="/assets/icons/add_photo_alternate_24dp_454445_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+          </div>
+          <h2>Choose a file</h2>
+        </div>
+        <div class="imagePreview">
+          <div class="imgIcon">
+            <img
+              src="/assets/icons/image_24dp_454445_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+          </div>
+
+          <h2>Image Preview</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="bookInfoBox">
+      <h2>Publication Details</h2>
+      <div class="inputBox">
+        <label for="comicPublisher">Publisher:</label>
+        <input
+          type="text"
+          name="comicPublisher"
+          id="comicPublisher"
+          placeholder="eg. Marvel Comics"
+        />
+      </div>
+
+      <div class="inputWrap">
+        <div class="inputBox">
+          <label for="publicationDate">Publication Date</label>
+          <input
+            type="text"
+            name="publicationDate"
+            id="publicationDate"
+            placeholder="mm/dd/yyyy"
+          />
+        </div>
+        <div class="inputBox">
+          <label for="volumeNumber">Series/Volume</label>
+          <input
+            type="text"
+            name="volumeNumber"
+            id="volumeNumb"
+            placeholder="eg. Vol 1"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="bookInfoBox">
+      <h2>Categorization</h2>
+      <div class="inputBox">
+        <label for="bookFormat">Format:</label>
+        <select name="bookFormat" id="bookFormat">
+          <option value="">Select Format Style</option>
+          <option value="comic">Comics</option>
+          <option value="manga">Manga</option>
+        </select>
+      </div>
+      <div class="inputBox">
+        <label for="genre">Genre(s)</label>
+        <input type="text" placeholder="Superhero" />
+      </div>
+      <div class="inputBox">
+        <label for="tags">Tag(s):</label>
+        <input type="text" placeholder="eg. Coming of Age" />
+      </div>
+    </div>
+
+    <div class="buttonWrap">
+      <button class="cyanBTN" type="submit">Add Entry</button>
+      <button class="blackBTN"><a href="#">Cancel</a></button>
+    </div>
+  </form>
+</main>
