@@ -132,6 +132,7 @@ export async function login(email, password) {
       const errorMessage = error.message;
 
       console.log("Error logging in:", error);
+      alert(errorMessage);
     });
 }
 

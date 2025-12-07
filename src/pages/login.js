@@ -27,8 +27,8 @@ export function init() {
     let email = $("#loginEmail").val();
     let password = $("#loginPassword").val();
 
-    console.log("User Login:", email);
-    console.log("User Password:", password);
+    // console.log("User Login:", email);
+    // console.log("User Password:", password);
 
     login(email, password);
   });
