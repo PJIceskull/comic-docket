@@ -49,7 +49,10 @@ export function init() {
 
   $.ajax({
     url: comicvineVolURL,
-    dataType: "jsonp",
+    // dataType: "jsonp",
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
     success: function (data) {
       console.log("Data: ", data);
     },
