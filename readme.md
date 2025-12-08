@@ -22,7 +22,7 @@ Links to view live app.
 
 - [Github Pages](https://pjiceskull.github.io/comic-docket/dist)
 - [Web4](https://in-info-web4.luddy.indianapolis.iu.edu/~pissah/ComicDocket/)
-<!-- - [Firebase]() -->
+- [Firebase](https://n423-comicdocket.web.app/)
 
 ## Project Description
 
